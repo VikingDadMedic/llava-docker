@@ -65,12 +65,11 @@ RUN python3 -m venv /venv
 
 # Clone the git repo of FaceFusion and set version
 WORKDIR /
-RUN git clone https://github.com/haotian-liu/LLaVA.git && \
-    cd /LLaVA && \
-    git checkout ${LLAVA_VERSION}
+RUN git clone https://github.com/VikingDadMedic/volcano.git && \
+    cd /volcano
 
 # Install the dependencies for LLaVA
-WORKDIR /LLaVA
+WORKDIR /volcano
 RUN source /venv/bin/activate && \
     pip3 install --upgrade pip && \
     pip3 install wheel && \
